@@ -1,6 +1,6 @@
 import 'dart:io';
 
-int prompt(int operation) {
+int prompt() {
   print("What operation do you want to perform?");
   print(" ");
   print("1. Addition: (x + y)");
@@ -14,10 +14,10 @@ int prompt(int operation) {
   return answer;
 }
 
-dynamic RepeatOperation() {
+RepeatOperation(String feedback) {
   print("Do you want to perform another calculation?");
   print("Enter 'Y' for Yes or 'N' for No:");
-  String? response = stdin.readLineSync();
+  dynamic response = stdin.readLineSync();
   return response;
 }
 
@@ -26,7 +26,7 @@ void main() {
   String? name = stdin.readLineSync();
   print("Welome $name");
 
-  int answer = prompt(1);
+  int answer = prompt();
   print(answer);
 
   if (answer == 1) {
@@ -40,15 +40,6 @@ void main() {
 
     int sum = x_value + y_value;
     print(sum);
-
-    if (RepeatOperation() == "Y") {
-      print(prompt(answer));
-      if (RepeatOperation() == "N") {
-        print("Closing...Bye");
-      } else {
-        print("Invalid operation");
-      }
-    }
   } else if (answer == 2) {
     print("Enter number for X: ");
     int x_value = int.parse(stdin.readLineSync()!);
@@ -60,15 +51,6 @@ void main() {
 
     int sum = x_value - y_value;
     print(sum);
-
-    if (RepeatOperation() == "Y") {
-      print(prompt(answer));
-      if (RepeatOperation() == "N") {
-        print("Closing...Bye");
-      } else {
-        print("Invalid operation ");
-      }
-    }
   } else if (answer == 3) {
     print("Enter number for X: ");
     int x_value = int.parse(stdin.readLineSync()!);
@@ -80,15 +62,6 @@ void main() {
 
     int sum = x_value * y_value;
     print(sum);
-
-    if (RepeatOperation() == "Y") {
-      print(prompt(answer));
-      if (RepeatOperation() == "N") {
-        print("Closing...Bye");
-      } else {
-        print("Invalid operation ");
-      }
-    }
   } else if (answer == 4) {
     print("Enter number for X: ");
     int x_value = int.parse(stdin.readLineSync()!);
@@ -100,15 +73,6 @@ void main() {
 
     double sum = x_value / y_value;
     print(sum);
-
-    if (RepeatOperation() == "Y") {
-      print(prompt(answer));
-      if (RepeatOperation() == "N") {
-        print("Closing...Bye");
-      } else {
-        print("Invalid operation ");
-      }
-    }
   } else if (answer == 2) {
     print("Enter number for X: ");
     int x_value = int.parse(stdin.readLineSync()!);
@@ -131,15 +95,6 @@ void main() {
 
     bool sum = x_value > y_value;
     print("$sum! $x_value is greater than $y_value");
-
-    if (RepeatOperation() == "Y") {
-      print(prompt(answer));
-      if (RepeatOperation() == "N") {
-        print("Closing...Bye");
-      } else {
-        print("Invalid operation ");
-      }
-    }
   } else if (answer == 6) {
     print("Enter number for X: ");
     int x_value = int.parse(stdin.readLineSync()!);
@@ -151,15 +106,6 @@ void main() {
 
     bool sum = x_value < y_value;
     print("$sum! $x_value is not greater than $y_value");
-
-    if (RepeatOperation() == "Y") {
-      print(prompt(answer));
-      if (RepeatOperation() == "N") {
-        print("Closing...Bye");
-      } else {
-        print("Invalid operation ");
-      }
-    }
   } else {
     print("Invalid operator");
   }
