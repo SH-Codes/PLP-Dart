@@ -7,14 +7,12 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String _title = 'Village Banking';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: _title,
+      title: 'Village Banking',
       home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
+        appBar: AppBar(title: const Text('Village Banking')),
         body: const MyStatefulWidget(),
       ),
     );
@@ -44,7 +42,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: const Text(
                   'Welcome',
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Color.fromARGB(255, 0, 0, 0),
                       fontWeight: FontWeight.w500,
                       fontSize: 30),
                 )),
