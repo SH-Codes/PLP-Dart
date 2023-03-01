@@ -1,5 +1,6 @@
 {
     "emulator.emulatorPathWindows": "",
     "emulator.androidColdBoot": false,
-    "emulator.emulatorPath": ""
+    "emulator.emulatorPath": "",
+    "terminal.integrated.allowMnemonics": true
 }

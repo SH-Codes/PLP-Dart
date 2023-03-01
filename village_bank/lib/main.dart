@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,10 +72,7 @@ class _HomePageState extends State<HomePage> {
       height: 60,
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(30),
-        ),
+        borderRadius: const BorderRadius.only(),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -137,11 +135,19 @@ class _HomePageState extends State<HomePage> {
                   ),
           ),
           IconButton(
-            enableFeedback: false,
+            enableFeedback: true,
             onPressed: () {
-              setState(() {
-                pageIndex = 2;
-              });
+              showBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Column(
+                    children: const [
+                      Text('Item 1'),
+                      Text('Item 2'),
+                    ],
+                  );
+                },
+              );
             },
             icon: pageIndex == 2
                 ? const Icon(
@@ -167,16 +173,34 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromARGB(255, 255, 255, 255),
-      child: Center(
-        child: Text(
-          "Page Number 1",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
+      height: 120,
+      width: 380,
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 94, 49, 49),
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          SizedBox(height: 10),
+          SizedBox(
+              width: 350,
+              child: TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Search the Vilage Bank App',
+                    filled: true,
+                    fillColor: Colors.white,
+                    prefixIcon: Icon(
+                      Icons.search,
+                      color: Colors.black,
+                    ),
+                    suffixIcon: Icon(
+                      Icons.close,
+                      color: Colors.black,
+                    )),
+              ))
+        ],
       ),
     );
   }
@@ -189,7 +213,7 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color.fromARGB(255, 255, 255, 255),
-      child: Center(
+      child: const Center(
         child: Text(
           "Page Number 2",
           style: TextStyle(
@@ -210,7 +234,7 @@ class Page3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color.fromARGB(255, 255, 255, 255),
-      child: Center(
+      child: const Center(
         child: Text(
           "Page Number 3",
           style: TextStyle(
@@ -231,7 +255,7 @@ class Page4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color.fromARGB(255, 255, 255, 255),
-      child: Center(
+      child: const Center(
         child: Text(
           "Page Number 4",
           style: TextStyle(

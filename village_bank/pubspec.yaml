@@ -53,16 +53,26 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+   assets:
+    - assets/images/vbl_s.png
+    - assets/images/vbl_m.png
+    - assets/images/vbl_wl.png
+    - assets/images/vbl_wol.png
+    - assets/images/vbl10wol.png
+    - assets/images/vbl10wl.png
+    - assets/images/vbl20wol.png
+    - assets/images/vbl30wol.png
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  #uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  #Flutter:
+   
+  
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
