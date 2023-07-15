@@ -2,5 +2,6 @@
     "emulator.emulatorPathWindows": "",
     "emulator.androidColdBoot": false,
     "emulator.emulatorPath": "",
-    "terminal.integrated.allowMnemonics": true
+    "terminal.integrated.allowMnemonics": true,
+    "cmake.sourceDirectory": "/home/wldrms/PLP-Dart/village_bank/linux/flutter"
 }
