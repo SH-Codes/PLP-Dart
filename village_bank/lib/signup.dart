@@ -35,13 +35,6 @@ class _SignupPageState extends State<SignupPage> {
         backgroundColor: const Color.fromARGB(255, 251, 192, 45),
         iconTheme: const IconThemeData(color: Colors.black),
         toolbarTextStyle: const TextTheme(
-
-
-
-
-
-
-
           titleLarge: TextStyle(color: Colors.black, fontSize: 18),
         ).bodyMedium,
         titleTextStyle: const TextTheme(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'login.dart';
+//import 'login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -140,8 +140,8 @@ class _HomePageState extends State<HomePage> {
               showBottomSheet(
                 context: context,
                 builder: (context) {
-                  return Column(
-                    children: const [
+                  return const Column(
+                    children: [
                       Text('Item 1'),
                       Text('Item 2'),
                     ],
@@ -179,9 +179,9 @@ class Page1 extends StatelessWidget {
         color: const Color.fromARGB(255, 94, 49, 49),
         borderRadius: BorderRadius.circular(30),
       ),
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           SizedBox(height: 10),
           SizedBox(
               width: 350,

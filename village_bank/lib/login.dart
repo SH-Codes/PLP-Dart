@@ -35,11 +35,11 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: const Color.fromARGB(255, 251, 192, 45),
         iconTheme: const IconThemeData(color: Colors.black),
         toolbarTextStyle: const TextTheme(
-          headline6: TextStyle(color: Colors.black, fontSize: 18),
-        ).bodyText2,
+          titleLarge: TextStyle(color: Colors.black, fontSize: 18),
+        ).bodyMedium,
         titleTextStyle: const TextTheme(
-          headline6: TextStyle(color: Colors.black, fontSize: 18),
-        ).headline6,
+          titleLarge: TextStyle(color: Colors.black, fontSize: 18),
+        ).titleLarge,
       ),
       body: SingleChildScrollView(
         child: Column(
